@@ -3,7 +3,7 @@ const app = document.querySelector("#books");
 
 const addBookToDOM = (book) => {
     let element = document.createElement("div");
-    let title = document.createElement("h3");
+    let title = document.createElement("h2");
     let author = document.createElement("p");
     let released = document.createElement("p");
     let pages = document.createElement("p");
@@ -12,6 +12,8 @@ const addBookToDOM = (book) => {
     author.textContent = `by ${book.authors[0]}`;
     released.textContent = book.released.substr(0, 4);
     pages.textContent = `${book.numberOfPages} pages`;
+
+    title.style.fontSize = "1.75rem";
 
     element.append(title);
     element.append(author);
